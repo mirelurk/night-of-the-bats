@@ -1,0 +1,20 @@
+GUIDE TO GAMEPLAY FOR NIGHT OF THE BATS
+
+
+*MOVEMENT*
+To move type "go " with a direction "north", "south", "east", "west".
+--Change the players location and print the new description.
+To move to a specific item in the room type "go to ".
+--Return description from object location db.
+Type "look" to look around your current surroundings.
+--Return the current area description.  Changes to the surroundings will need
+to be added to the description as things are dropped and manipulated.
+
+*INTERACTING*
+
+*STATS AND INVENTORY*
+Type "inventory" to see current inventory items.
+--Print the current inventory.
+Type "drop " followed by the item to drop an inventory item.
+--Modify the inventory and add the item to the description of the current
+location.
