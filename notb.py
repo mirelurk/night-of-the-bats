@@ -6,13 +6,23 @@
 #def startup():
     #Take in the player's previous data, setting the location, inventory and player status
 
+import sqlite3
+
+def stringparse(s):
+    p = s.lower()
+    p = p.split()
+    return(p)
+
+
 def main():
     flag = 0
     while flag!=1:
         rawinput = input()
-        userinput = rawinput.lower()
-        userinput = userinput.split()
-        if userinput[0]=="quit":
+        userinput = stringparse(rawinput)
+        print(userinput)
+        if len(userinput)==0:
+            print("blank")
+        elif userinput[0]=="quit":
             flag=1
             break
         elif userinput[0]=="go":
