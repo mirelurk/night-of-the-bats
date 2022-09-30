@@ -1,0 +1,6 @@
+ID,Name,Description,F,R,B,L,NPC1,NPC2,NPC3,NPC4,NPC5
+1,bedroom,You’re standing in your bedroom.  It’s a bit of a mess.,3,2,0,0,0,0,0,0,0
+2,bathroom,Your bathroom.  There’s a toilet.,0,0,1,0,0,0,0,0,0
+3,hallway,A hallway.  You can see the kitchen from here.,4,0,1,0,0,0,0,0,0
+4,kitchen,The kitchen.  Morning sunlight comes in from the window.,5,0,3,0,0,0,0,0,0
+5,dining room,There’s a newspaper on the table.,0,0,4,0,0,0,0,0,0
