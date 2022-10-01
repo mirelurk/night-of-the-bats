@@ -8,6 +8,10 @@
 
 import sqlite3
 
+import player
+
+player = player.Player()
+
 def stringparse(s):
     p = s.lower()
     p = p.split()
@@ -19,14 +23,16 @@ def main():
     while flag!=1:
         rawinput = input()
         userinput = stringparse(rawinput)
-        print(userinput)
+        #print(userinput)
         if len(userinput)==0:
             print("blank")
         elif userinput[0]=="quit":
             flag=1
             break
         elif userinput[0]=="go":
-            print("Moving character")
+            currloc = player.loc
+            player.loc = currloc+1
+            print(player.loc)
         else:
             print("error")
             
