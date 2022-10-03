@@ -1,7 +1,5 @@
 #Core gameplay functionality
 
-import gamedata
-
 #flags
 locflag = 0
 
@@ -10,24 +8,26 @@ def locinteract(n):
         pass
     elif n[1]=="left":
         pass
-    elif n[2]=="forward":
-        newloc = int(gd.ld[3])
-        gd.loc = newloc
+    elif n[1]=="forward":
+        return(1)
     elif n[1]=="back":
         pass
     else:
         print("You can go back, forward, right or left.")
 
 def entry(n):
+    print(Gamedata.gd.loc)
     if n[0]=="go":
         locinteract(n)
+        return(0)
     elif n[0]=="quit":
-        gd.quit = 1
+        return(1)
     elif n[0]=="inventory":
         #inventory function
-        pass
+        return(0)
     elif n[0]=="look":
-        print(gamedata.locdescrip)
+        print(Gamedata.gd.locdescrip)
+        return(0)
     else:
-        pass
+        return(0)
 
