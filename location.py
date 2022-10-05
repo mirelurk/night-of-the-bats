@@ -20,14 +20,26 @@ class Location:
         locdata = fetchloc.fetchone()
 
         self.loc = cmd
-        self.ld = locdata
+        self.ld = list(locdata)
         self.locdescrip = locdata[2]
-        self.forward = locdata[3]
-        self.right = locdata[4]
-        self.back = locdata[5]
-        self.left = locdata[6]
+        self.forward = int(locdata[3])
+        self.right = int(locdata[4])
+        self.back = int(locdata[5])
+        self.left = int(locdata[6])
 
     def mvforward(self):
-        newloc = self.forward
+        newloc = int(self.forward)
+        self.updateld(newloc)
+
+    def mvback(self):
+        newloc = int(self.back)
+        self.updateld(newloc)
+
+    def mvleft(self):
+        newloc = int(self.left)
+        self.updateld(newloc)
+
+    def mvright(self):
+        newloc = int(self.right)
         self.updateld(newloc)
 
