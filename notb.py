@@ -33,8 +33,32 @@ def main():
         rawinput = input(">")
         ui = stringparse(rawinput)
         if ui[0]=="go":
-            loc.mvforward()
-            print(loc.locdescrip)
+            if ui[1]=="forward":
+                if loc.forward==0:
+                    print("You can't go that way.")
+                else:
+                    loc.mvforward()
+                    print(loc.locdescrip)
+            elif ui[1]=="back":
+                if loc.back==0:
+                    print("You can't go that way.")
+                else:
+                    loc.mvback()
+                    print(loc.locdescrip)
+            elif ui[1]=="left":
+                if loc.left==0:
+                    print("You can't go that way.")
+                else:
+                    loc.mvleft()
+                    print(loc.locdescrip)
+            elif ui[1]=="right":
+                if loc.right==0:
+                    print("You can't go that way.")
+                else:
+                    loc.mvright()
+                    print(loc.locdescrip)
+            else:
+                print("You can't go forward, back, left or right.")
         elif ui[0]=="quit":
             flag = 1
         elif ui[0]=="inventory":
