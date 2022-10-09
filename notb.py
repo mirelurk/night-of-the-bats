@@ -62,7 +62,19 @@ def main():
         elif ui[0]=="quit":
             flag = 1
         elif ui[0]=="inventory":
-            inventory()
+            player.printinv()
+        elif ui[0]=="pick" and ui[1]=="up":
+            f = player.addinv(" ".join(ui[2:]))
+            if f==1:
+                continue
+            else:
+                print("You can't pick that up.")
+        elif ui[0]=="drop":
+           f = player.dropinv(" ".join(ui[1:]))
+           if f==1:
+               continue
+           else:
+               print("You can't drop that.")
         elif ui[0]=="look":
             print(loc.locdescrip)
         else:
